@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+
+.main{
+    width:100%;
+    height:93vh;
+}
+
+.login{
+    display:flex;
+    width:60%;
+    gap:20px;
+    flex-direction:column;
+    padding:20px;
+    border-radius:10px !important;
+}
+
+.textField{
+    width:100%;
+}
+
+.submitButton{
+    width:100%;
+    background:#f44336 !important;
+    color:White !important;
+    font-weight:bold !important;
+    margin:10px 0px;
+}
+
+.submitButtonDisabled{
+    width:100%;
+    font-weight:bold !important;
+    margin:10px 0px;
+}
+
+.progress{
+    color:white !important;
+}
+
+.form{
+    display:flex;
+    width:100%;
+    gap:17px;
+    flex-direction: column;
+}
+
+.LeftGrid{
+    background-color:#f443365c;
+    height: 100%;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.RightGrid{
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forgotpassword{
+    text-decoration: none;
+    font-size:12px;
+    color:#f44336;
+    cursor: pointer;
+}
+
+.forgotpassword:hover{
+    color:#f44336;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.iconPassword{
+    font-size: 10px;
+    color:#f44336;
+}
+
+.errorMessage{
+    font-size: 15px;
+    color: red;
+
+}
+
+.image{
+    object-fit: cover;
+    width:80%;
+    height: 80%;
+}
+
+.pizzaHeading{
+    font-family: 'Autour One', cursive;
+    color:#f44336;
+    display:block;
+    font-size: xx-large;
+    font-weight: 400;
+
+}

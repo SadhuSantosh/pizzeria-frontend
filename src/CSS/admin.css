@@ -1,0 +1,15 @@
+.red{
+    background:rgb(247, 4, 4) !important;
+    color:white !important;
+}
+.green{
+    background:rgb(5, 189, 5) !important;
+    color:white !important;
+}
+.buttons{
+    display:flex;
+     height: 100vh; 
+     width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
