@@ -66,9 +66,9 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888 !important;
+  background: rgb(170, 169, 169) !important;
 }
 
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 5px;
 }

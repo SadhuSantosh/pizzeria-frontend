@@ -1,5 +1,5 @@
 import "./App.css";
-import React from 'react';
+import React,{useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,14 +12,17 @@ import EmailVerification from "./components/verification";
 import OrderPizza from './components/orderPizza/orderPizza';
 import Payment from './components/orderPizza/payment';
 import AOrderConfirmation from './components/admin/orderConfirm';
+import ForgotPassword from './components/forgotPassword';
+import Home from './components/home';
 
 function App() {
+  const [selCategory, setCategory] = useState(0);
   return (
     <Router>
       <div className="main">
         <Switch>
           <Route exact path="/">
-            <h3 style={{ textAlign: "center" }}>Welcome To Pizzeria !! </h3>
+            <Home/>
           </Route>
           <Route exact path="/login">
             <Login/>
@@ -31,16 +34,19 @@ function App() {
             Admin Portal
           </Route>
           <Route exact path="/forgot-password">
-            Forgot password
+            <ForgotPassword/>
+          </Route>
+          <Route exact path="/change-password/:id">
+            change password
           </Route>
           <Route path="/user/verification/:id">
              <EmailVerification/>
           </Route>
           <Route exact path="/order">
-             <OrderPizza/>
+             <OrderPizza selCategory={selCategory} setCategory={setCategory}/>
           </Route>
           <Route exact path="/payment">
-             <Payment/>
+             <Payment />
           </Route>
           <Route exact path="/admin/orders">
              <AOrderConfirmation/>

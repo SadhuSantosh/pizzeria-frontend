@@ -37,7 +37,7 @@ export default function VToppings({ data, selectedData, setSelectedData, categor
             {
                 data && category && cat &&
                 <div style={{ width: "100%",background: "#f4433614",height:"100%"}} key={category?.id}>
-                    <Typography variant="h6" align="center">
+                    <Typography variant="h6" align="center" className='heading'>
                         <strong>Select your veg toppings </strong>
                     </Typography>
                     <Typography variant="body1" align="center">

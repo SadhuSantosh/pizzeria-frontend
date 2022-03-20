@@ -67,9 +67,10 @@
 
 .forgotpassword{
     text-decoration: none;
-    font-size:12px;
+    font-size:13px;
     color:#f44336;
     cursor: pointer;
+    font-weight:bold;
 }
 
 .forgotpassword:hover{
@@ -89,7 +90,13 @@
 .errorMessage{
     font-size: 15px;
     color: red;
+    font-weight: bold;
+}
 
+.successMessage{
+    font-size: 15px;
+    color: green;
+    font-weight: bold;
 }
 
 .image{
@@ -104,5 +111,17 @@
     display:block;
     font-size: xx-large;
     font-weight: 400;
+}
 
+.logoImage{
+        object-fit: cover;
+        height: 50%;
+}
+
+.loginButton{
+    width:50%;
+    background:#f44336 !important;
+    color:White !important;
+    font-weight:bold !important;
+    margin:10px 0px;
 }

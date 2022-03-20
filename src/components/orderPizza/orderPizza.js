@@ -9,7 +9,7 @@ import NVToppings from './category/NVToppings';
 import VToppings from './category/VToppings';
 
 
-export default function OrderPizza() {
+export default function OrderPizza({selCategory, setCategory}) {
     const [data, setData] = useState([]);
     const [selectedData, setSelectedData] = useState({
         base:{},
@@ -18,7 +18,6 @@ export default function OrderPizza() {
         veg_toppings:[],
         nVeg_toppings:[]
     });
-    const [selCategory, setCategory] = useState(0);
     console.log(selectedData);
     const history = useHistory();
     useEffect(() => {

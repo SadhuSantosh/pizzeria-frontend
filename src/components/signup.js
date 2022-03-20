@@ -14,6 +14,7 @@ import Appbar from './appBar';
 
 export default function Signup() {
     const [errMessage, setErrorMessage] = useState("");
+    const [successMessage, setSuccessMessage]=useState('');
     const [dob, setDob] = useState(null);
     const [load, setLoad] = useState(false);
     const [disabled, setDisabled] = useState(true);
@@ -81,7 +82,7 @@ export default function Signup() {
                 else {
                     response = await response.json();
                     localStorage.setItem('auth-token', response.token);
-                    history.push('/');
+                    setSuccessMessage(response.message);
                 }
             })
             .catch(error => {
@@ -110,8 +111,11 @@ export default function Signup() {
                         <div className="errorMessage">
                             {errMessage}
                         </div>
+                        <div className="successMessage">
+                            {successMessage}
+                        </div>
                         <Typography variant="h5" style={{ display: "block" }}>
-                            Signup
+                            Sign Up
                         </Typography>
 
                         <form onSubmit={handleSubmit} className="form">

@@ -16,7 +16,7 @@ function Login() {
         email: '',
         password: '',
         showPassword: false,
-    })
+    });
     const [errMessage, setErrorMessage] = useState("");
     useEffect(() => {
         if (data?.email == null || data?.password == null || data?.email.length === 0 || data?.password.length === 0 || data?.email === '' || data?.password === '') {
@@ -29,8 +29,8 @@ function Login() {
 
 
     const handleChange = (prop) => (event) => {
-        setData({ ...data, [prop]: event.target.value });
         setErrorMessage("");
+        setData({ ...data, [prop]: event.target.value });
         if (data?.email === '' && data?.password === '') {
             setErrorMessage("Email & password are required");
         }
@@ -160,7 +160,7 @@ function Login() {
                                 Login &nbsp; {load ? <CircularProgress size={16} className="progress" /> : null}
                             </Button>
                             <Typography variant="caption" >
-                                Don't have an account? <span onClick={() => { history.push("/signup") }} className='forgotpassword'>Signup</span>
+                                Don't have an account? <span onClick={() => { history.push("/signup") }} className='forgotpassword'>Sign Up</span>
                             </Typography>
                         </form>
                     </div>

@@ -43,8 +43,8 @@ export default function VToppings({ data, selectedData, setSelectedData, categor
         <>
             {
                 data && category && cat &&
-                <div style={{ width: "100%",background: "#f4433614",height:"100%"}} key={category?.id}>
-                    <Typography variant="h6" align="center">
+                <div style={{ width: "100%",background: "#f4433614",minHeight:'100vh'}} className='mainDiv' key={category?.id}>
+                    <Typography variant="h6" align="center" className='heading'>
                         <strong>Select your non-veg toppings </strong>
                     </Typography>
                     <Typography variant="body1" align="center">

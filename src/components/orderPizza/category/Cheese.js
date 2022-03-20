@@ -32,7 +32,7 @@ export default function Cheese({ data, selectedData, setSelectedData, category, 
             {
                 data && category && cat &&
                 <div style={{ width: "100%",background: "#f4433614",height:"100%"}} key={category?.id}>
-                    <Typography variant="h6" align="center">
+                    <Typography variant="h6" align="center" className='heading'>
                         <strong>Select your {category?.name} </strong>
                     </Typography>
                     <div style={{ display: "flex", justifyContent: "space-between", margin: "0px 30px" }}>
