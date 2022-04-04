@@ -39,7 +39,7 @@ function App() {
           <Route exact path="/change-password/:id">
             change password
           </Route>
-          <Route path="/user/verification/:id">
+          <Route exact path="/user/verification/:id">
              <EmailVerification/>
           </Route>
           <Route exact path="/order">
