@@ -10,14 +10,10 @@ var socketOpened = "";
 
 exampleSocket.addEventListener('open',function (event) {
        socketOpened= "opened";
-       console.log(typeof(event));
-    //    console.log(JSON.parse(event?.data.arrayBuffer().then(buffer=> {
-    //        console.log(buffer);
-    //     })));
   });
 
 exampleSocket.addEventListener('message',async function (message) {
-     console.log(message);
+     console.log(message?.data);
 });
 
 const styles = makeStyles(()=>({
@@ -59,13 +55,10 @@ function A_OrderConfirmation() {
     }
 
     useEffect(() => {
-        // setTimeout(()=>{exampleSocket.send(JSON.stringify(data))},2000);
+        
         if (socketOpened === "opened"){
-            exampleSocket.send(JSON.stringify({
-                a:100
-            }));
+            setTimeout(()=>{exampleSocket.send(JSON.stringify(data))},2000);
         }
-        console.log(JSON.stringify(data));
     }, [data])
 
     useEffect(() => {
